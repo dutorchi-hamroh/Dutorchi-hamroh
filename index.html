@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dutorchi hamroh</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#fffaf2;color:#382b22}
+header{background:#75452f;color:white;padding:25px 15px;text-align:center}
+header h1{margin:0;font-size:28px}
+header p{margin-bottom:0}
+nav{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;padding:14px}
+button{background:#86563c;color:white;border:0;border-radius:9px;padding:12px 17px;cursor:pointer}
+button:hover{background:#593923}
+main{max-width:850px;margin:auto;padding:15px}
+.card{background:white;border-radius:14px;padding:20px;margin:15px 0;box-shadow:0 2px 10px #00000012}
+h2{color:#75452f}
+.lesson{border-left:5px solid #c99b55}
+input,textarea,select{width:100%;padding:12px;margin:8px 0;border:1px solid #ccc;border-radius:8px}
+.hidden{display:none}
+footer{text-align:center;padding:25px;color:#765d4d}
+</style>
+</head>
+<body>
+
+<header>
+<h1>🎵 DUTORCHI HAMROH</h1>
+<p>Milliy cholg‘ularni raqamli texnologiyalar orqali o‘rganamiz!</p>
+</header>
+
+<nav>
+<button onclick="show('home')">Bosh sahifa</button>
+<button onclick="show('lessons')">Darslar</button>
+<button onclick="show('student')">O‘quvchi</button>
+<button onclick="show('teacher')">O‘qituvchi</button>
+</nav>
+
+<main>
+<section id="home">
+<div class="card">
+<h2>Xush kelibsiz!</h2>
+<p>«Dutorchi hamroh» — boshlang‘ich sinf o‘quvchilarining cholg‘u ijrochiligi kompetensiyasini shakllantirishga yordam beruvchi raqamli ta’lim platformasi.</p>
+<p>Bu yerda dutor bilan tanishasiz, mashqlar bajarasiz va o‘z ijro mahoratingizni rivojlantirasiz.</p>
+<button onclick="show('lessons')">Darslarni boshlash</button>
+</div>
+<div class="card">
+<h2>🎯 Bizning maqsadimiz</h2>
+<p>Bolalarda milliy cholg‘ularga qiziqish uyg‘otish, dutor chalish ko‘nikmalarini bosqichma-bosqich rivojlantirish.</p>
+</div>
+</section>
+
+<section id="lessons" class="hidden">
+<h2>📚 Darslar</h2>
+<div class="card lesson"><h3>1-dars. Dutor bilan tanishuv</h3><p>Dutorning tuzilishi va uning qismlari bilan tanishing.</p></div>
+<div class="card lesson"><h3>2-dars. Dutorni to‘g‘ri tutish</h3><p>Qomatni tik tuting. Dutorni tanaga qulay joylashtiring. Chap qo‘l bilan dastani qattiq siqmang. O‘ng qo‘l bilagini bo‘sh tuting.</p><p>Oyoqlar qulay holatda tursin, ijro paytida tanada zo‘riqish bo‘lmasin.</p></div>
+<div class="card lesson"><h3>3-dars. Dutor torlari</h3><p>Dutor torlari bilan tanishing va ularni farqlashni o‘rganing.</p></div>
+<div class="card lesson"><h3>4-dars. Dutor chalish mashqlari</h3><p>Oddiy zarblar va torlarni chalish mashqlarini bajaring.</p></div>
+<div class="card lesson"><h3>5-dars. Oddiy kuy ijrosi</h3><p>O‘rgangan mashqlaringiz asosida kuy ijro eting.</p></div>
+</section>
+
+<section id="student" class="hidden">
+<div class="card">
+<h2>👧 O‘quvchi kabineti</h2>
+<label>Guruh kodi:</label>
+<input id="group" placeholder="O‘qituvchi bergan kodni kiriting">
+<label>Ismingiz:</label>
+<input id="studentName" placeholder="Ism va familiya">
+<p id="studentMessage"></p>
+<button onclick="joinGroup()">Guruhga qo‘shilish</button>
+</div>
+<div class="card">
+<h3>🎤 Ijro topshirig‘i</h3>
+<p>Dutor ijroingizning audio yoki video yozuvini tanlang. Hozircha bu prototipda fayllar serverga yuborilmaydi.</p>
+<label>Audio yozuv:</label><input type="file" accept="audio/*">
+<label>Video yozuv:</label><input type="file" accept="video/*">
+</div>
+<div class="card">
+<h3>📝 Bilimingizni tekshiring</h3>
+<p>Dutor chalayotganda o‘tirish holati qanday bo‘lishi kerak?</p>
+<button onclick="answer(false)">Bukchayib o‘tirish</button>
+<button onclick="answer(true)">Qomatni tik va erkin tutish</button>
+<p id="quizResult"></p>
+</div>
+</section>
+
+<section id="teacher" class="hidden">
+<div class="card">
+<h2>👩‍🏫 O‘qituvchi kabineti</h2>
+<p>Bu bo‘lim o‘qituvchining o‘z guruhi bilan ishlashiga mo‘ljallangan.</p>
+<label>Guruh nomi:</label>
+<input placeholder="Masalan: 4-A sinf">
+<label>Guruh kodi:</label>
+<input placeholder="Guruh kodini kiriting">
+<p>Kelajakdagi to‘liq versiyada o‘qituvchi o‘quvchilar ijrosini ko‘radi, tinglaydi va baholaydi.</p>
+</div>
+<div class="card">
+<h3>⭐ Ijroni baholash mezonlari</h3>
+<p>Har bir mezon 0 dan 2 ballgacha baholanadi.</p>
+<p>1. Dutorni to‘g‘ri tutish — 0–2 ball</p>
+<p>2. Qo‘l harakatlari — 0–2 ball</p>
+<p>3. Torlarni to‘g‘ri chalish — 0–2 ball</p>
+<p>4. Ritmga rioya qilish — 0–2 ball</p>
+<p>5. Mustaqil ijro — 0–2 ball</p>
+<label>Umumiy ball:</label>
+<input type="number" min="0" max="10" placeholder="0–10">
+<textarea placeholder="O‘quvchiga tavsiya va fikrlaringiz"></textarea>
+</div>
+</section>
+</main>
+
+<footer>© Dutorchi hamroh | Ta’lim va milliy musiqa uyg‘unligi</footer>
+
+<script>
+function show(id){
+document.querySelectorAll('main section').forEach(s=>s.classList.add('hidden'));
+document.getElementById(id).classList.remove('hidden');
+}
+function answer(correct){
+document.getElementById('quizResult').textContent=
+correct?'Barakalla! Javobingiz to‘g‘ri! 🎉':'Yana bir bor o‘ylab ko‘ring.';
+}
+function joinGroup(){
+let name=document.getElementById('studentName').value;
+let code=document.getElementById('group').value;
+document.getElementById('studentMessage').textContent=
+name&&code?'Ma’lumot kiritildi. Bu prototipda haqiqiy guruhga ulanish hali ishlamaydi.':'Ism va guruh kodini kiriting.';
+}
+</script>
+</body>
+</html>

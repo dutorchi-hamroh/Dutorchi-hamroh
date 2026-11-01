@@ -2,24 +2,30 @@
 <html lang="uz">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dutorchi hamroh</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#fffaf2;color:#382b22}
-header{background:#75452f;color:white;padding:25px 15px;text-align:center}
-header h1{margin:0;font-size:28px}
-header p{margin-bottom:0}
-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;padding:14px}
-button{background:#86563c;color:white;border:0;border-radius:9px;padding:12px 17px;cursor:pointer}
+body{margin:0;background:#fff9ef;color:#44352d;font-family:Arial,sans-serif}
+header{background:#75452f;color:white;text-align:center;padding:25px 12px}
+header h1{margin:0;font-size:27px}
+header p{margin:10px 0 0}
+nav{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;padding:12px}
+button{background:#86563c;color:white;border:0;border-radius:9px;padding:12px;cursor:pointer;font-size:14px}
 button:hover{background:#593923}
-main{max-width:850px;margin:auto;padding:15px}
-.card{background:white;border-radius:14px;padding:20px;margin:15px 0;box-shadow:0 2px 10px #00000012}
+main{max-width:900px;margin:auto;padding:12px}
+.card{background:white;border-radius:14px;padding:19px;margin:12px 0;box-shadow:0 3px 12px #00000010}
 h2{color:#75452f}
-.lesson{border-left:5px solid #c99b55}
-input,textarea,select{width:100%;padding:12px;margin:8px 0;border:1px solid #ccc;border-radius:8px}
+h3{color:#86563c}
+.lesson{border-left:5px solid #c99b55;padding:12px;margin:10px 0;background:#fffaf2;border-radius:8px}
+input,textarea,select{width:100%;padding:12px;margin:7px 0;border:1px solid #ccc;border-radius:8px}
 .hidden{display:none}
-footer{text-align:center;padding:25px;color:#765d4d}
+.option{display:block;width:100%;margin:8px 0;text-align:left;background:#f1e6d9;color:#44352d}
+.option:hover{background:#e5d0b9}
+.correct{background:#ccebd1!important;color:#155724}
+.wrong{background:#f5cccc!important;color:#8b2020}
+.small{font-size:13px;color:#77685d}
+footer{text-align:center;padding:25px;color:#806d5d}
 </style>
 </head>
 <body>
@@ -32,81 +38,135 @@ footer{text-align:center;padding:25px;color:#765d4d}
 <nav>
 <button onclick="show('home')">Bosh sahifa</button>
 <button onclick="show('lessons')">Darslar</button>
+<button onclick="show('tests')">Testlar</button>
 <button onclick="show('student')">O‘quvchi</button>
 <button onclick="show('teacher')">O‘qituvchi</button>
 </nav>
 
 <main>
+
 <section id="home">
 <div class="card">
-<h2>Xush kelibsiz!</h2>
+<h2>Assalomu alaykum, yosh dutorchilar! 👋</h2>
 <p>«Dutorchi hamroh» — boshlang‘ich sinf o‘quvchilarining cholg‘u ijrochiligi kompetensiyasini shakllantirishga yordam beruvchi raqamli ta’lim platformasi.</p>
-<p>Bu yerda dutor bilan tanishasiz, mashqlar bajarasiz va o‘z ijro mahoratingizni rivojlantirasiz.</p>
+<p>Bu yerda dutorni taniysiz, mashqlar bajarasiz, testlar ishlaysiz va o‘z ijro mahoratingizni rivojlantirasiz.</p>
 <button onclick="show('lessons')">Darslarni boshlash</button>
 </div>
 <div class="card">
 <h2>🎯 Bizning maqsadimiz</h2>
 <p>Bolalarda milliy cholg‘ularga qiziqish uyg‘otish, dutor chalish ko‘nikmalarini bosqichma-bosqich rivojlantirish.</p>
 </div>
+<div class="card">
+<h2>🌟 O‘rgan, mashq qil, ijro et!</h2>
+<p>Har bir dars seni yangi bilim va yangi musiqiy yutuqlarga olib boradi.</p>
+</div>
 </section>
 
 <section id="lessons" class="hidden">
-<h2>📚 Darslar</h2>
-<div class="card lesson"><h3>1-dars. Dutor bilan tanishuv</h3><p>Dutorning tuzilishi va uning qismlari bilan tanishing.</p></div>
-<div class="card lesson"><h3>2-dars. Dutorni to‘g‘ri tutish</h3><p>Qomatni tik tuting. Dutorni tanaga qulay joylashtiring. Chap qo‘l bilan dastani qattiq siqmang. O‘ng qo‘l bilagini bo‘sh tuting.</p><p>Oyoqlar qulay holatda tursin, ijro paytida tanada zo‘riqish bo‘lmasin.</p></div>
-<div class="card lesson"><h3>3-dars. Dutor torlari</h3><p>Dutor torlari bilan tanishing va ularni farqlashni o‘rganing.</p></div>
-<div class="card lesson"><h3>4-dars. Dutor chalish mashqlari</h3><p>Oddiy zarblar va torlarni chalish mashqlarini bajaring.</p></div>
-<div class="card lesson"><h3>5-dars. Oddiy kuy ijrosi</h3><p>O‘rgangan mashqlaringiz asosida kuy ijro eting.</p></div>
+<div class="card">
+<h2>📚 Dutor saboqlari</h2>
+<div class="lesson">
+<h3>1-dars. Dutor bilan tanishuv</h3>
+<p>Dutor — o‘zbek xalqining an’anaviy torli, chertib chalinadigan musiqa cholg‘usi.</p>
+</div>
+<div class="lesson">
+<h3>2-dars. Dutorning tuzilishi</h3>
+<p>Dutor kosasi, dastasi, quloqlari va torlaridan tashkil topadi.</p>
+</div>
+<div class="lesson">
+<h3>3-dars. To‘g‘ri o‘tirish</h3>
+<p>Gavdani tik tuting, yelkalarni bo‘sh qo‘ying. Oyoqlar qulay joylashsin.</p>
+</div>
+<div class="lesson">
+<h3>4-dars. Dutorni to‘g‘ri tutish</h3>
+<p>Dutor tanaga yaqin va barqaror tursin. Uni ortiqcha siqmang.</p>
+</div>
+<div class="lesson">
+<h3>5-dars. O‘ng va chap qo‘l</h3>
+<p>O‘ng qo‘l torlarni chertadi, chap qo‘l esa dastada tovush hosil qilishda ishtirok etadi.</p>
+</div>
+<div class="lesson">
+<h3>6-dars. Dutor torlari</h3>
+<p>Torlarni ehtiyotkorlik bilan cherting. Har bir tovushni tinglang.</p>
+</div>
+<div class="lesson">
+<h3>7-dars. Ritm mashqlari</h3>
+<p>Bir xil tezlikda sanash va ritmga mos chertishni mashq qiling.</p>
+</div>
+<div class="lesson">
+<h3>8-dars. Oddiy kuy ijrosi</h3>
+<p>O‘rgangan harakatlaringizni birlashtirib, sodda kuylarni ijro eting.</p>
+</div>
+<button onclick="show('tests')">Bilimimni sinab ko‘raman!</button>
+</div>
+</section>
+
+<section id="tests" class="hidden">
+<div class="card">
+<h2>🧠 Bilimingni sinab ko‘r!</h2>
+<p>Bo‘limni tanla va savollarga javob ber. Har bir to‘g‘ri javob uchun 1 ball olasan.</p>
+<div id="categories">
+<button onclick="startTest('all')">🌟 Aralash test</button>
+<button onclick="startTest('dutor')">🎵 Dutor tuzilishi</button>
+<button onclick="startTest('posture')">🪑 To‘g‘ri o‘tirish</button>
+<button onclick="startTest('hands')">🤚 Qo‘l harakatlari</button>
+<button onclick="startTest('rhythm')">🥁 Ritm va ijro</button>
+</div>
+<div id="quiz" class="hidden">
+<h3 id="question"></h3>
+<div id="answers"></div>
+<p id="feedback"></p>
+<p id="progress"></p>
+<button id="next" class="hidden" onclick="nextQuestion()">Keyingi savol →</button>
+</div>
+<div id="result" class="hidden">
+<h2>🏆 Natijang!</h2>
+<h3 id="score"></h3>
+<p id="message"></p>
+<button onclick="show('tests');resetQuiz()">Yana test ishlash</button>
+</div>
+</div>
 </section>
 
 <section id="student" class="hidden">
 <div class="card">
 <h2>👧 O‘quvchi kabineti</h2>
-<label>Guruh kodi:</label>
-<input id="group" placeholder="O‘qituvchi bergan kodni kiriting">
-<label>Ismingiz:</label>
-<input id="studentName" placeholder="Ism va familiya">
-<p id="studentMessage"></p>
+<p>Ismingiz va o‘qituvchingiz bergan guruh kodini kiriting.</p>
+<input id="studentName" placeholder="Ism va familiyangiz">
+<input id="groupCode" placeholder="Guruh kodi">
 <button onclick="joinGroup()">Guruhga qo‘shilish</button>
-</div>
-<div class="card">
+<p id="joinMessage"></p>
+<hr>
 <h3>🎤 Ijro topshirig‘i</h3>
-<p>Dutor ijroingizning audio yoki video yozuvini tanlang. Hozircha bu prototipda fayllar serverga yuborilmaydi.</p>
-<label>Audio yozuv:</label><input type="file" accept="audio/*">
-<label>Video yozuv:</label><input type="file" accept="video/*">
-</div>
-<div class="card">
-<h3>📝 Bilimingizni tekshiring</h3>
-<p>Dutor chalayotganda o‘tirish holati qanday bo‘lishi kerak?</p>
-<button onclick="answer(false)">Bukchayib o‘tirish</button>
-<button onclick="answer(true)">Qomatni tik va erkin tutish</button>
-<p id="quizResult"></p>
+<p>O‘qituvchingiz topshirig‘iga muvofiq ijro yozuvingizni tanlang.</p>
+<label>Audio yozuv:</label>
+<input type="file" accept="audio/*">
+<label>Video yozuv:</label>
+<input type="file" accept="video/*">
+<p class="small">Hozircha fayllar serverga yuborilmaydi. Haqiqiy yuborish imkoniyati keyingi bosqichda qo‘shiladi.</p>
 </div>
 </section>
 
 <section id="teacher" class="hidden">
 <div class="card">
 <h2>👩‍🏫 O‘qituvchi kabineti</h2>
-<p>Bu bo‘lim o‘qituvchining o‘z guruhi bilan ishlashiga mo‘ljallangan.</p>
-<label>Guruh nomi:</label>
-<input placeholder="Masalan: 4-A sinf">
-<label>Guruh kodi:</label>
-<input placeholder="Guruh kodini kiriting">
-<p>Kelajakdagi to‘liq versiyada o‘qituvchi o‘quvchilar ijrosini ko‘radi, tinglaydi va baholaydi.</p>
-</div>
-<div class="card">
-<h3>⭐ Ijroni baholash mezonlari</h3>
+<p>Guruhingiz uchun nom va kod belgilang.</p>
+<input id="groupName" placeholder="Masalan: 3-A sinf">
+<input id="teacherCode" placeholder="Guruh kodi yarating">
+<button onclick="createGroup()">Guruh yaratish</button>
+<p id="teacherMessage"></p>
+<h3>📊 Ijroni baholash mezonlari</h3>
 <p>Har bir mezon 0 dan 2 ballgacha baholanadi.</p>
-<p>1. Dutorni to‘g‘ri tutish — 0–2 ball</p>
-<p>2. Qo‘l harakatlari — 0–2 ball</p>
-<p>3. Torlarni to‘g‘ri chalish — 0–2 ball</p>
-<p>4. Ritmga rioya qilish — 0–2 ball</p>
-<p>5. Mustaqil ijro — 0–2 ball</p>
-<label>Umumiy ball:</label>
-<input type="number" min="0" max="10" placeholder="0–10">
-<textarea placeholder="O‘quvchiga tavsiya va fikrlaringiz"></textarea>
+<div class="lesson">Dutorni to‘g‘ri tutish: 0–2 ball</div>
+<div class="lesson">Qo‘l harakatlari: 0–2 ball</div>
+<div class="lesson">Torlarni chertish: 0–2 ball</div>
+<div class="lesson">Ritmga rioya qilish: 0–2 ball</div>
+<div class="lesson">Mustaqil ijro: 0–2 ball</div>
+<h3>Jami: 10 ball</h3>
+<p class="small">Bu hozircha namoyish uchun. Haqiqiy guruhlar, o‘quvchilar va baholarni saqlash uchun himoyalangan server kerak bo‘ladi.</p>
 </div>
 </section>
+
 </main>
 
 <footer>© Dutorchi hamroh | Ta’lim va milliy musiqa uyg‘unligi</footer>
@@ -116,15 +176,98 @@ function show(id){
 document.querySelectorAll('main section').forEach(s=>s.classList.add('hidden'));
 document.getElementById(id).classList.remove('hidden');
 }
-function answer(correct){
-document.getElementById('quizResult').textContent=
-correct?'Barakalla! Javobingiz to‘g‘ri! 🎉':'Yana bir bor o‘ylab ko‘ring.';
+
+const questions=[
+{c:'dutor',q:'Dutor qanday cholg‘u?',a:['Puflab chalinadigan','Torli, chertib chalinadigan','Zarbli'],x:1},
+{c:'dutor',q:'Dutorning tovush chiqaradigan asosiy qismi qaysi?',a:['Kosa va torlar','Kamoni','Klaviaturasi'],x:0},
+{c:'dutor',q:'Dutorning torlari qayerga mahkamlanadi?',a:['Quloqlariga','Yelkasiga','Tagligiga'],x:0},
+{c:'dutor',q:'Dutor qaysi xalqning milliy cholg‘ularidan biri?',a:['O‘zbek xalqining','Faqat yapon xalqining','Faqat nemis xalqining'],x:0},
+{c:'posture',q:'Dutor chalishda gavda qanday bo‘lishi kerak?',a:['Bukilgan','Tik va erkin','Juda tarang'],x:1},
+{c:'posture',q:'Dutorni qanday tutish kerak?',a:['Tanaga qulay va barqaror yaqin','Yerdan uzoqda','Bir qo‘lda osiltirib'],x:0},
+{c:'posture',q:'Chalish paytida yelkalar qanday bo‘lishi kerak?',a:['Ko‘tarilgan','Bo‘sh va erkin','Qattiq qisilgan'],x:1},
+{c:'posture',q:'Oyoqlar qanday joylashishi kerak?',a:['Qulay va tayanchda','Havoda','Bir-biriga qattiq bog‘langan'],x:0},
+{c:'hands',q:'O‘ng qo‘lning asosiy vazifasi nima?',a:['Torlarni chertish','Dutorni bezash','Kuy nomini yozish'],x:0},
+{c:'hands',q:'Chap qo‘l asosan nima qiladi?',a:['Dastada tovush balandligini o‘zgartiradi','Torlarni bo‘yaydi','Dutorni ko‘taradi'],x:0},
+{c:'hands',q:'Chalishda qo‘l harakatlari qanday bo‘lishi kerak?',a:['Erkin va nazoratli','Juda keskin','Harakatsiz'],x:0},
+{c:'hands',q:'Torni chertishda nimaga e’tibor beriladi?',a:['Aniq va ravon tovushga','Faqat baland ovozga','Dutor rangiga'],x:0},
+{c:'rhythm',q:'Musiqada ritm nimani bildiradi?',a:['Tovushlarning vaqt bo‘yicha tartibini','Cholg‘u rangini','Sahna bezagini'],x:0},
+{c:'rhythm',q:'Bir maromda sanash nima uchun kerak?',a:['Ritmni saqlash uchun','Dutorni sozlash uchun emas','Kuy nomini topish uchun'],x:0},
+{c:'rhythm',q:'Kuy ijrosida nimalarga rioya qilish kerak?',a:['Ritm va ohangga','Faqat tezlikka','Faqat kiyimga'],x:0},
+{c:'rhythm',q:'Mashqni qanday boshlash ma’qul?',a:['Sekin va aniq','Juda tez','Tayyorlanmasdan'],x:0}
+];
+
+let list=[],index=0,points=0,answered=false;
+
+function startTest(cat){
+list=cat==='all'?[...questions]:questions.filter(q=>q.c===cat);
+list.sort(()=>Math.random()-.5);
+index=0;points=0;
+document.getElementById('categories').classList.add('hidden');
+document.getElementById('result').classList.add('hidden');
+document.getElementById('quiz').classList.remove('hidden');
+renderQuestion();
 }
+
+function renderQuestion(){
+answered=false;
+let q=list[index];
+document.getElementById('question').textContent=(index+1)+'. '+q.q;
+document.getElementById('feedback').textContent='';
+document.getElementById('progress').textContent='Savol '+(index+1)+' / '+list.length;
+document.getElementById('next').classList.add('hidden');
+let box=document.getElementById('answers');
+box.innerHTML='';
+q.a.forEach((a,i)=>{
+let b=document.createElement('button');
+b.className='option';
+b.textContent=a;
+b.onclick=()=>answer(i,b);
+box.appendChild(b);
+});
+}
+
+function answer(i,button){
+if(answered)return;
+answered=true;
+let q=list[index];
+let buttons=document.querySelectorAll('.option');
+buttons[q.x].classList.add('correct');
+if(i===q.x){
+points++;
+document.getElementById('feedback').textContent='🌟 Barakalla! To‘g‘ri javob!';
+}else{
+button.classList.add('wrong');
+document.getElementById('feedback').textContent='Yana urinib ko‘r! To‘g‘ri javob yashil rangda.';
+}
+document.getElementById('next').classList.remove('hidden');
+document.getElementById('next').textContent=index===list.length-1?'Natijani ko‘rish':'Keyingi savol →';
+}
+
+function nextQuestion(){
+index++;
+if(index<list.length){renderQuestion();return;}
+document.getElementById('quiz').classList.add('hidden');
+document.getElementById('result').classList.remove('hidden');
+document.getElementById('score').textContent=points+' / '+list.length+' ball';
+document.getElementById('message').textContent=points===list.length?'Ajoyib! Barcha savollarga to‘g‘ri javob berding!':points>=list.length/2?'Yaxshi natija! Darslarni takrorlab, yana mashq qil.':'Harakatda davom et! Darslarni qayta o‘rganib ko‘r.';
+}
+
+function resetQuiz(){
+document.getElementById('categories').classList.remove('hidden');
+document.getElementById('quiz').classList.add('hidden');
+document.getElementById('result').classList.add('hidden');
+}
+
 function joinGroup(){
-let name=document.getElementById('studentName').value;
-let code=document.getElementById('group').value;
-document.getElementById('studentMessage').textContent=
-name&&code?'Ma’lumot kiritildi. Bu prototipda haqiqiy guruhga ulanish hali ishlamaydi.':'Ism va guruh kodini kiriting.';
+let n=document.getElementById('studentName').value.trim();
+let c=document.getElementById('groupCode').value.trim();
+document.getElementById('joinMessage').textContent=n&&c?'Rahmat, '+n+'! Guruhga qo‘shilish funksiyasi keyingi bosqichda ulanadi.':'Ismingiz va guruh kodini kiriting.';
+}
+
+function createGroup(){
+let n=document.getElementById('groupName').value.trim();
+let c=document.getElementById('teacherCode').value.trim();
+document.getElementById('teacherMessage').textContent=n&&c?'Guruh ma’lumotlari kiritildi. Haqiqiy guruh yaratish uchun server ulanishi kerak.':'Guruh nomi va kodini kiriting.';
 }
 </script>
 </body>
